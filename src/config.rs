@@ -28,6 +28,8 @@ pub struct ClientConfig {
 #[derive(Deserialize, Clone)]
 pub struct NotificationSettings {
     pub logging: Option<bool>,
+
+    #[allow(dead_code)]
     pub gotify: Option<GotifySettings>,
 }
 
@@ -37,6 +39,7 @@ pub enum NotificationType {
 }
 
 #[derive(Deserialize, Clone)]
+#[allow(dead_code)]
 pub struct GotifySettings {
     pub url: String,
     pub token: String,
@@ -48,6 +51,7 @@ pub struct Event {
     pub name: String,
 
     /// Optional label
+    #[allow(dead_code)]
     pub label: Option<String>,
 
     /// Toggle regex

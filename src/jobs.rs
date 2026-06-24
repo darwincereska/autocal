@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use std::time::Duration;
 use crate::config::{Config, NotificationSettings, NotificationType};
-use google_calendar::types::{Event, EventAttendee, OrderBy, SendUpdates};
+use google_calendar::types::{Event, EventAttendee, SendUpdates};
 use crate::utils::calendar::list_all_events;
 use chrono::{TimeZone, Utc};
 use tokio::sync::mpsc::{Sender, channel};
@@ -225,7 +225,7 @@ async fn add_participants_to_event(
         ).await.map_err(|e| e.to_string());
 
         // Send notifications
-        if let Ok(update) = update {
+        if update.is_ok() {
            if let Some(notifications) = notifications.as_ref() {
                notifications.notify(format!("Updated: {}({})", &event.summary, &event.id), NotificationType::Normal);
            }

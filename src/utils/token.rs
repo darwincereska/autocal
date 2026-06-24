@@ -1,4 +1,4 @@
-use google_calendar::{AccessToken, Client};
+use google_calendar::AccessToken;
 
 #[derive(Clone, Debug)]
 pub struct Token {
