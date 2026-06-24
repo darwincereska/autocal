@@ -1,0 +1,5 @@
+/target
+token.txt
+config.toml
+.DS_Store
+/.idea/**
