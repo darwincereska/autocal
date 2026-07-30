@@ -1,0 +1,23 @@
+interval = 3600
+
+# Google Calendar client setup
+[client]
+client_id = "CLIENT_ID"
+client_secret = "CLIENT_SECRET"
+redirect_uri = "https://localhost/callback"
+
+# Notifications config (optional)
+[notifications]
+logging = true
+
+# Gotify (optional)
+[notifications.gotify]
+url = ""
+token = ""
+
+# Event entry
+[[events]]
+name = "Example"
+label = "WORK"
+use_regex = true
+participants = [""]

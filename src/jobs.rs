@@ -86,7 +86,7 @@ pub async fn start(client: google_calendar::Client, config: Config) {
 /// Loads user's primary calendar and sends new events to channel
 ///
 /// # Arguments
-/// * `client`  - Google Calendar client
+/// * `client`   - Google Calendar client
 /// * `config`   - AutoCal config
 /// * `time_min` - A time string in **RFC3339** format
 /// * `sender`   - Channel for sending events
